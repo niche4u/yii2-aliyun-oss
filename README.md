@@ -1,14 +1,14 @@
-#Yii2-AliyunOss
+###Yii2-AliyunOss
 
 阿里云OSS官方SDK的Composer封装，支持Yii2。
 基于https://github.com/johnlui/AliyunOSS 修改，添加删除文件的功能，修改getUrl（只返回文件外链url，不带其他参数）。
 
 
-#安装
+###安装
 
 $ php composer.phar require chonder/Yii2-AliyunOss "dev-master"
 
-##Yii2使用
+###Yii2使用
 
 修改config/params.php
 
@@ -24,7 +24,7 @@ $ php composer.phar require chonder/Yii2-AliyunOss "dev-master"
 
 在components中创建Oss.php，内容如下：
 
-<?php
+```php
 
 namespace app\components;
 
@@ -81,12 +81,12 @@ class OSS {
 
 }
 
-?>
+```
 
 
-#使用
+###使用
 
-<?php
+```php
 
 use app\components\Oss;
 
@@ -98,7 +98,7 @@ OSS::createBucket('一个字符串'); // 新增一个 Bucket。注意，Bucket �
 
 OSS::getAllObjectKey('某个 Bucket 名称'); // 获取该 Bucket 中所有文件的文件名，返回 Array。
 
-?>
+```
 
-##License
+###License
 除 “版权所有（C）阿里云计算有限公司” 的代码文件外，遵循 [MIT license](http://opensource.org/licenses/MIT) 开源。
