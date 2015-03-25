@@ -13,6 +13,7 @@ $ php composer.phar require chonder/yii2-aliyun-oss "dev-master"
 修改config/params.php
 
 添加：
+```php
     'oss'=>array(
         'ossServer' => '', //服务器外网地址，深圳为 http://oss-cn-shenzhen.aliyuncs.com
         'ossServerInternal' => '', //服务器内网地址，深圳为 http://oss-cn-shenzhen-internal.aliyuncs.com
@@ -20,7 +21,7 @@ $ php composer.phar require chonder/yii2-aliyun-oss "dev-master"
         'AccessKeySecret' => '', //阿里云给的AccessKeySecret
         'Bucket' => '' //创建的空间名
     ),
-
+```
 
 在components中创建Oss.php，内容如下：
 
