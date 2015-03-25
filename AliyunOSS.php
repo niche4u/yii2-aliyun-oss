@@ -1,6 +1,6 @@
 <?php
 
-namespace JohnLui\AliyunOSS;
+namespace chonder\AliyunOSS;
 
 require_once __DIR__.'/oss/aliyun.php';
 
@@ -38,10 +38,10 @@ class AliyunOSS {
   public function uploadFile($key, $file)
   {
     return $this->ossClient->putObject(array(
-        'Bucket' => $this->bucket,
-        'Key' => $key,
-        'Content' => fopen($file, 'r'),
-        'ContentLength' => filesize($file)
+      'Bucket' => $this->bucket,
+      'Key' => $key,
+      'Content' => fopen($file, 'r'),
+      'ContentLength' => filesize($file)
     ));
   }
 
@@ -53,15 +53,14 @@ class AliyunOSS {
       'Expires' => $expire_time
     ]);
   }
-
-    public function delFile($key)
-    {
-      $this->ossClient->deleteObject([
-          'Bucket' => $this->bucket,
-          'Key' => $key,
-      ]);
-    }
-
+  
+  public function delFile($key)
+  {
+    $this->ossClient->deleteObject([
+      'Bucket' => $this->bucket,
+      'Key' => $key,
+    ]);
+  }
 
   public function createBucket($bucketName)
   {
