@@ -6,7 +6,7 @@
 
 ###安装
 
-$ php composer.phar require chonder/Yii2-AliyunOss "dev-master"
+$ php composer.phar require chonder/yii2-aliyun-oss "dev-master"
 
 ###Yii2使用
 
